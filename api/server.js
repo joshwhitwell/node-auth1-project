@@ -85,6 +85,20 @@ server.post('/api/auth/login', async (req, res) => {
     }
 })
 
+server.get('/api/auth/logout', (req, res) => {
+    if (req.session && req.session.user) {
+        req.session.destroy(err => {
+            if (err) {
+                res.status(500).json({ message: 'Failure logging out' })
+            } else {
+                res.status(200).json({ message: 'Logged out' })
+            }
+        })
+    } else {
+        res.status(500).json({ message: 'Failure logging out' })
+    }
+})
+
 server.get('/users', protected, async (req, res) => {
     try {
         const users = await Users.find()
