@@ -16,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/joshwhitwell/node-auth1-project/issues"
   },
-  "homepage": "https://github.com/joshwhitwell/node-auth1-project#readme"
+  "homepage": "https://github.com/joshwhitwell/node-auth1-project#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "knex": "^0.21.12",
+    "sqlite": "^4.0.15"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
 }
