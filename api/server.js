@@ -12,7 +12,7 @@ server.use(session({
     name: 'session',
     secret: 'secret',
     cookie: {
-        maxAge: 1000 * 10,
+        maxAge: 1000 * 60 * 30,
         secure: false,
         httpOnly: true
     },
